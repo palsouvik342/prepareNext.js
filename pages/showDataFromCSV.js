@@ -1,49 +1,55 @@
 const fs = require('fs');
 const Papa = require('papaparse');
 
-export async function getServerSideProps() {
-  // papa.parse(file,{
-  //     header: true,
-  //     worker: true, 
-  //     step: function(result) {
-  //         console.log(result)
-  //         return {
-  //           props:{
-  //             result
-  //           }
-  //         }
-  //       },
-  //       complete: function(results, file) {
-  //         console.log('parsing completed'); 
-  //         // console.log(results)
-  //     }
-  // });
-  let mainData=[];
+
+function parseCSV()
+{
   const file = fs.createReadStream('public/data.csv');
-  Papa.parse(file, {
-    header: true,
-    complete: function(results) {
-      mainData = results.data;
-      console.log(mainData)
+  return new Promise((resolve, reject) => {
+    Papa.parse(file, {
+      header: true,
+      complete: (results) => resolve(results),
+      error: (error) => reject(error)
+    });
+  })
+}
+export async function getServerSideProps() {
+  const resp = await parseCSV();
+  const dataFromCSV = resp.data;
+  console.log("all Data Came")
+    return {
+        props: {
+          mainData:dataFromCSV
+        }
     }
-  });
-  // console.log(mainData)
-  return {
-    props: {
-      mainData,
-    }
-  }
 }
 
-
 const showDataFromCSV = ({mainData}) => {
-  console.log(mainData)
+  // console.log("souvik"+mainData)
   return (
-    <div>
-      {mainData && mainData.map(data => (
-        <tr>
-        </tr>
-      ))}
+    <div className='csv_data'>
+      <table border={1}>
+        <thead>
+          <tr>
+            <th>Column1</th>
+            <th>Column2</th>
+            <th>Column3</th>
+            <th>Column4</th>
+            <th>Column5</th>
+          </tr>
+        </thead>
+        <tbody>
+        {mainData && mainData.map((data,index) => (
+          <tr key={index}>
+            <td>{data.column1}</td>
+            <td>{data.column2}</td>
+            <td>{data.column3}</td>
+            <td>{data.column4}</td>
+            <td>{data.column5}</td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
     </div>
   )
 }
