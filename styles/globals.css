@@ -1,5 +1,7 @@
 *{margin: 0; padding: 0;}
-body{display: flex; align-items: center; justify-content: center; height: 100vh; color: cadetblue}
+/* body{display: flex; align-items: center; justify-content: center; height: 100vh; color: cadetblue} */
+.csv_data{color: cadetblue;}
+.csv_data td{padding: 10px;}
 .game{display: flex; flex-direction: column; align-items: center;}
 .game .game_title{margin: 20px 0; ;}
 .game .whoose_turn{color: black; font-weight: 600; font-size: 18px;}
