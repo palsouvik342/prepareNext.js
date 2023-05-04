@@ -1,0 +1,17 @@
+*{margin: 0; padding: 0;}
+body{display: flex; align-items: center; justify-content: center; height: 100vh; color: cadetblue}
+.game{display: flex; flex-direction: column; align-items: center;}
+.game .game_title{margin: 20px 0; ;}
+.game .whoose_turn{color: black; font-weight: 600; font-size: 18px;}
+.game__board{display: grid; grid-gap: 12px ; height: 400px; width: 400px; grid-template-columns: repeat(3, 1fr); padding-top: 30px;cursor: pointer;}
+.square{background-color: #f4f4f4; box-shadow: 7px 8px 9px #ddd; border-radius: 8px; position: relative;}
+.square h1{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.square.highlighted{background: aquamarine;}
+body{position: relative;z-index: 2;}
+.restart_window{position: absolute; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 99; height: 100%; width: 100%; display: flex; align-items:flex-start; justify-content: center;}
+.restart_box{background-color: #fff; width: 400px; height: 150px; display: flex; align-items: center;  border-radius: 10px; box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5); flex-direction: column; justify-content: space-evenly; transition: all 0.3s linear;}
+.restart_box button{background-color:cadetblue ; padding: 10px 15px; border: 1px solid cadetblue; color: #fff; border-radius: 4px; cursor: pointer;}
+
+.allNews{display: flex; flex-wrap: wrap; justify-content: center;}
+.allNews .singleNews{padding: 20px; box-shadow: 0 0 10px #000000a8; margin: 25px;}
+a{text-decoration: none; color: unset;}

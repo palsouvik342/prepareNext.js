@@ -1,0 +1,68 @@
+{
+    "posts" : [
+        {
+            "id" : 1,
+            "title" : "souvik  betech aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body" : "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+            "id" : 2,
+            "title" : "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body" : "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+            "id" : 3,
+            "title" : "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body" : "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+            "id" : 4,
+            "title" : "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body" : "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+            "id" : 5,
+            "title" : "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body" : "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        }
+    ],
+    "news":
+    [
+        {
+            "id" : 1,
+            "title" : "News Title 1",
+            "body" : "News Body 1",
+            "category" : "sports"
+        },
+        {
+            "id" : 2,
+            "title" : "News Title 2",
+            "body" : "News Body 2",
+            "category" : "politics"
+        },
+        {
+            "id" : 3,
+            "title" : "News Title 3",
+            "body" : "News Body 3",
+            "category" : "business"
+        },
+        {
+            "id" : 4,
+            "title" : "News Title 4",
+            "body" : "News Body 4",
+            "category" : "sports"
+        },
+        {
+            "id" : 5,
+            "title" : "News Title 5",
+            "body" : "News Body 5",
+            "category" : "politics"
+        }
+    ],
+    "dashboard" : {
+        "posts" : "5",
+        "likes" : "100",
+        "followers" : "20",
+        "following" : "50"
+    }
+}
