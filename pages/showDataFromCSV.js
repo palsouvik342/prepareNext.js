@@ -42,12 +42,6 @@ const showDataFromCSV = ({mainData}) => {
     <div>
       {mainData && mainData.map(data => (
         <tr>
-          <td>{data.column0}</td>
-          <td>{data.column1}</td>
-          <td>{data.column2}</td>
-          <td>{data.column3}</td>
-          <td>{data.column4}</td>
-          <td>{data.column5}</td>
         </tr>
       ))}
     </div>
